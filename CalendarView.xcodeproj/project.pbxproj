@@ -12,6 +12,9 @@
 		019DE7AD1F387B7D00B65AFD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 019DE7AB1F387B7D00B65AFD /* Main.storyboard */; };
 		019DE7AF1F387B7D00B65AFD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 019DE7AE1F387B7D00B65AFD /* Assets.xcassets */; };
 		019DE7B21F387B7D00B65AFD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 019DE7B01F387B7D00B65AFD /* LaunchScreen.storyboard */; };
+		019DE7C81F38811600B65AFD /* CalendarVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 019DE7C61F38811600B65AFD /* CalendarVC.swift */; };
+		019DE7C91F38811600B65AFD /* CalendarVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 019DE7C71F38811600B65AFD /* CalendarVC.xib */; };
+		019DE7CC1F3888DC00B65AFD /* WeekDayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 019DE7CB1F3888DC00B65AFD /* WeekDayView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +25,9 @@
 		019DE7AE1F387B7D00B65AFD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		019DE7B11F387B7D00B65AFD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		019DE7B31F387B7D00B65AFD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		019DE7C61F38811600B65AFD /* CalendarVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarVC.swift; sourceTree = "<group>"; };
+		019DE7C71F38811600B65AFD /* CalendarVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CalendarVC.xib; sourceTree = "<group>"; };
+		019DE7CB1F3888DC00B65AFD /* WeekDayView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeekDayView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +60,7 @@
 		019DE7A61F387B7D00B65AFD /* CalendarView */ = {
 			isa = PBXGroup;
 			children = (
+				019DE7BB1F387BDB00B65AFD /* Calendar */,
 				019DE7A71F387B7D00B65AFD /* AppDelegate.swift */,
 				019DE7A91F387B7D00B65AFD /* ViewController.swift */,
 				019DE7AB1F387B7D00B65AFD /* Main.storyboard */,
@@ -62,6 +69,16 @@
 				019DE7B31F387B7D00B65AFD /* Info.plist */,
 			);
 			path = CalendarView;
+			sourceTree = "<group>";
+		};
+		019DE7BB1F387BDB00B65AFD /* Calendar */ = {
+			isa = PBXGroup;
+			children = (
+				019DE7C61F38811600B65AFD /* CalendarVC.swift */,
+				019DE7C71F38811600B65AFD /* CalendarVC.xib */,
+				019DE7CB1F3888DC00B65AFD /* WeekDayView.swift */,
+			);
+			name = Calendar;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -91,7 +108,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0830;
-				LastUpgradeCheck = 0830;
+				LastUpgradeCheck = 0900;
 				ORGANIZATIONNAME = "Andrey Mosin";
 				TargetAttributes = {
 					019DE7A31F387B7D00B65AFD = {
@@ -126,6 +143,7 @@
 			files = (
 				019DE7B21F387B7D00B65AFD /* LaunchScreen.storyboard in Resources */,
 				019DE7AF1F387B7D00B65AFD /* Assets.xcassets in Resources */,
+				019DE7C91F38811600B65AFD /* CalendarVC.xib in Resources */,
 				019DE7AD1F387B7D00B65AFD /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -138,7 +156,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				019DE7AA1F387B7D00B65AFD /* ViewController.swift in Sources */,
+				019DE7CC1F3888DC00B65AFD /* WeekDayView.swift in Sources */,
 				019DE7A81F387B7D00B65AFD /* AppDelegate.swift in Sources */,
+				019DE7C81F38811600B65AFD /* CalendarVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -174,7 +194,9 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
@@ -182,7 +204,11 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -225,7 +251,9 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
@@ -233,7 +261,11 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -304,6 +336,7 @@
 				019DE7B81F387B7D00B65AFD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
